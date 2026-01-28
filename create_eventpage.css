@@ -1,0 +1,151 @@
+/* === Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: #ffffff;
+  /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);*/
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff4d4d;
+  cursor: pointer;
+  background-image: linear-gradient(
+        79deg, 
+        #E43939,
+        #581D60
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.logo a{
+    text-decoration: none;
+}
+
+.nav-links a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  background-image: linear-gradient(
+        79deg, 
+        #E43939,
+        #581D60
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* === Body Styling === */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #E43939, #581D60); /* EventFront brand colors */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: #333;
+}
+
+/* === Page Heading === */
+h1 {
+  text-align: center;
+  margin: 40px 0 20px;
+  font-size: 72px;
+  font-weight: 400;
+  color: #fff;
+}
+
+/* === Form Container === */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px;
+  /* border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15); */
+  display: flex;
+  flex-direction: column;
+}
+
+/* === Labels === */
+form label {
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* === Inputs and Textarea === */
+form input[type="text"],
+form input[type="date"],
+form input[type="time"],
+form input[type="file"],
+form textarea {
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* === Submit Button === */
+form input[type="submit"] {
+  padding: 12px;
+  background-color: #ff4d4d;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+  background-color: #e63c3c;
+}
+
+/* === Info Text === */
+p {
+  text-align: center;
+  margin: 20px auto;
+  font-size: 15px;
+  color: #555;
+  max-width: 600px;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  form {
+    width: 90%;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+}

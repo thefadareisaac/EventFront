@@ -1,0 +1,159 @@
+/* === Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === Body Styling === */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  background-image: url('images/confetti-bg-3.png');
+}
+
+/* Header */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: #ffffff;
+  /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);*/
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff4d4d;
+  cursor: pointer;
+  background-image: linear-gradient(
+        79deg, 
+        #E43939,
+        #581D60
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.logo a{
+    text-decoration: none;
+}
+
+.nav-links a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  background-image: linear-gradient(
+        79deg, 
+        #E43939,
+        #581D60
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* === Section Layout === */
+
+
+h1 {
+  font-size: 72px;
+  color: #000;
+  text-align: center;
+  font-weight: 400;
+  background-image: linear-gradient(
+      79deg, 
+      #E43939,
+      #581D60
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+
+section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* === Headings === */
+section h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #ff4d4d;
+}
+
+/* === Paragraphs === */
+section p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* === Lists === */
+section ul {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+section ul li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/* === Blockquote (Tagline) === */
+blockquote {
+  font-style: italic;
+  font-size: 18px;
+  color: #ff4d4d;
+  border-left: 4px solid #ff4d4d;
+  padding-left: 15px;
+  margin-top: 20px;
+}
+
+/* === Footer === */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #222;
+  color: #fff;
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  section {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  section h2 {
+    font-size: 20px;
+  }
+
+  section p,
+  section ul li {
+    font-size: 15px;
+  }
+}
