@@ -1,0 +1,154 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  background-image: url('/images/confetti-bg-3.png');
+  background-position: center;
+  color: #333;
+}
+
+/* Header (consistent with other pages) */
+.main-header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #ffffff;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  background-image: linear-gradient(79deg, #E43939, #581D60);
+  background-clip:text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-weight: 500;
+  background-image: linear-gradient(79deg, #E43939, #581D60);
+  background-clip:text;
+  -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Profile Menu */
+.profile-menu {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.profile-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.profile-icon:hover {
+  opacity: 0.8;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  min-width: 200px;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.dropdown a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Profile Section */
+.profile-container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.profile-container h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  background-image: linear-gradient(79deg, #E43939, #581D60);
+  -webkit-background-clip: text;
+  background-clip:text;
+  -webkit-text-fill-color: transparent;
+}
+
+.profile-container p {
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #000;
+}
+
+.profile-container label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.profile-container input[type="text"],
+.profile-container input[type="email"],
+.profile-container input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.btn-primary {
+  padding: 12px;
+  background-image: linear-gradient(to right, #E43939, #581D60);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Events - EventFront</title>
+  <link rel="stylesheet" href="myevents.css" />
+  <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+  <script src="myevents.js" defer></script>
+  <script src="/general.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Yatra+One&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header class="main-header">
+    <div class="logo">EventFront</div>
+    <nav class="nav-links">
+      <a href="/Home Page/index.html">Home</a>
+      <a href="/Create Event/create_eventpage.html">Create Event</a>
+      <a href="/Events Dashboard/dashboard.html">Discover Events</a>
+      <a href="/About/about.html">About Us</a>
+      <a href="/contact/contact.html">Contact</a>
+      <div class="profile-menu" id="profileMenu" style="display:none;">
+        <img src="/images/profile-icon.png" alt="Profile" id="profileIcon" class="profile-icon">
+        <div id="dropdownMenu" class="dropdown">
+          <a href="/Profile/profile.html">View Profile</a>
+          <a href="/Events Dashboard/myregistrations.html">My Registererd Events</a>
+          <a href="#" id="logoutBtn">Logout</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Page Title -->
+  <section class="dashboard-header">
+    <h1>My Events</h1>
+    <p>Manage and update the events you’ve created</p>
+  </section>
+
+  <!-- Events Grid -->
+  <section class="dashboard-section">
+    <div class="event-grid" id="myEventsGrid">
+      <!-- My events will be loaded dynamically here -->
+    </div>
+  </section>
+
+  <!-- Event Dialog -->
+  <div id="eventDialog" class="dialog">
+    <div class="dialog-content">
+      <span id="closeDialog">&times;</span>
+      <img id="dialogEventImage" src="" alt="Event Image">
+      <div class="event-details">
+        <h2 id="dialogEventName"></h2>
+        <p id="dialogEventDescription"></p>
+        <p><strong>Date:</strong> <span id="dialogEventDate"></span></p>
+        <p><strong>Location:</strong> <span id="dialogEventLocation"></span></p>
+      </div>
+
+      <!-- Edit/Delete Buttons -->
+      <button id="editBtn">Edit</button>
+      <button id="deleteBtn">Delete</button>
+
+      <!-- Edit Form (hidden by default) -->
+      <form id="editEventForm" style="display:none; margin-top:20px;">
+        <label>Name:</label>
+        <input type="text" id="editName">
+        <label>Description:</label>
+        <textarea id="editDescription"></textarea>
+        <label>Date:</label>
+        <input type="date" id="editDate">
+        <label>Time:</label>
+        <input type="time" id="editTime">
+        <label>Location:</label>
+        <input type="text" id="editLocation">
+        <button type="submit">Save Changes</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Participants Dialog -->
+  <!-- Participants Dialog -->
+  <div id="participantsDialog" class="dialog">
+    <div class="dialog-content">
+      <span id="closeParticipantsDialog">&times;</span>
+      <h2>Registered Participants</h2>
+      <table id="participantsTable">
+        <thead>
+          <tr>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Registration Time</th>
+          </tr>
+        </thead>
+        <tbody id="participantsList"></tbody>
+      </table>
+      <!-- ✅ Export button -->
+    <button id="exportParticipantsBtn">Export to Spreadsheet</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 EventFront. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

@@ -10,10 +10,14 @@ body {
   font-family: 'Poppins', sans-serif;
   background-color: #ffffff;
   color: #333;
+  background-image: url('/images/confetti-bg-3.png');
+  background-position: left;
 }
 
 /* Header */
 .main-header {
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -66,7 +70,7 @@ body {
 }
 
 /* === Login Container === */
-.login-container {
+.signup-container {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -74,11 +78,21 @@ body {
   align-items: center;
 }
 
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: -15px;
+  margin-bottom: 10px;
+}
+
 /* === Headings and Text === */
-.login-container h1 {
-    font-size: 72px;
+.signup-container h1 {
+    font-size: 56px;
     color: #000;
+    text-align: center;
+    line-height: 100%;
     font-weight: 400;
+    margin-bottom: 10px;
     background-image: linear-gradient(
         79deg, 
         #E43939,
@@ -90,14 +104,15 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-.login-container p {
+.signup-container p {
     font-size: 14px;
     color: #000;
-    line-height: 10%;
+    line-height: 100%;
+    text-align: center;
 }
 
 
-.login-box {
+.signup-box {
   padding: 40px;
   width: 100%;
   max-width: 400px;
@@ -107,26 +122,27 @@ body {
 
 
 
-.login-box p {
+.signup-box p {
   margin-bottom: 16px;
   font-size: 16px;
   color: #000;
 }
 
 /* === Form Styling === */
-.login-box form {
+.signup-box form {
   display: flex;
   flex-direction: column;
   text-align: left;
 }
 
-.login-box label {
+.signup-box label {
   margin-bottom: 5px;
   font-weight: 600;
 }
 
-.login-box input[type="email"],
-.login-box input[type="password"] {
+.signup-box input[type="email"],
+.signup-box input[type="text"],
+.signup-box input[type="password"] {
   padding: 12px;
   margin-bottom: 20px;
   border: 1px solid #ccc;
@@ -134,8 +150,9 @@ body {
   font-size: 14px;
 }
 
-.login-box input[type="submit"] {
+.signup-box input[type="submit"] {
   padding: 12px;
+  margin-bottom: 30px;
   background-color: #ff4d4d;
   background-image: linear-gradient(to right, #E43939, #581D60);
   color: #fff;
@@ -146,21 +163,8 @@ body {
   transition: background 0.3s ease;
 }
 
-.login-box input[type="submit"]:hover {
+.signup-box input[type="submit"]:hover {
   opacity: 0.9;
-}
-
-/* === Forgot Password Link === */
-.forgot-link {
-  display: block;
-  margin: 15px 0;
-  color: #0077cc;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.forgot-link:hover {
-  text-decoration: underline;
 }
 
 /* === Google Login Button === */
