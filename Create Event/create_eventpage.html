@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Your Event</title>
+    <link rel="stylesheet" href="create_eventpage.css">
+    <script defer src="create_eventpage.js"></script>
+    <script src="/general.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Yatra+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo">EventFront</div>
+        <nav class="nav-links">
+          <a href="/Home Page/index.html">Home</a>
+          <a href="/Events Dashboard/myevents.html" id="myeventsLink">My Events</a>
+          <a href="/Login/login.html" id="loginLink">Log In</a>
+          <a href="/Sign Up/signup.html" id="signupLink">Sign Up</a>
+          <a href="/About/about.html">About Us</a>
+          <a href="/contact/contact.html">Contact</a>
+          <div class="profile-menu" id="profileMenu" style="display:none;">
+            <img src="/images/profile-icon.png" alt="Profile" id="profileIcon" class="profile-icon">
+            <div id="dropdownMenu" class="dropdown">
+              <a href="/Profile/profile.html">View Profile</a>
+              <a href="#" id="logoutBtn">Logout</a>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+    <div class="display structure">
+      <h1>Create Your Event in Minutes</h1>
+      <form method="post" enctype="multipart/form-data" id="eventform" action="">
+          <label for="eventimage">Add Your Event Image:</label><br>
+          <div id="image-error" class="error-message"></div>
+          <img id="preview" src="" alt="Image Preview" style="display:none; width:300px; margin-top:15px; border-radius:8px;"/>
+          <input type="file" id="eventimage" name="eventimage" accept="image/png, image/jpeg"><br> 
+          <label for="eventname">Event Name:</label><br>
+          <div id="name-error" class="error-message"></div>
+          <input type="text" id="eventname" name="eventname" placeholder="Your event name here"><br>
+          <label for="date">Date:</label><br>
+          <div id="date-error" class="error-message"></div>
+          <input type="date" id="date" name="date"><br>
+          <label for="time">Time:</label><br>
+          <div id="time-error" class="error-message"></div>
+          <input type="time" id="time" name="time"><br>
+          <label for="location">Location:</label><br>
+          <div id="location-error" class="error-message"></div>
+          <input type="text" id="location" name="location" placeholder="Your event location here"><br>
+          <label for="description">Description:</label><br>
+          <div id="description-error" class="error-message"></div>
+          <textarea id="description" name="description" placeholder="Enter your event description"></textarea><br><br>
+          <input type="submit" value="Publish Event"><br>
+          <p>Once published, your event will be visible to registered users and open for sign-ups.</p>
+      </form>
+      
+    </div>
+    
+
+    <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 EventFront. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EventFront</title>
+  <meta name="description" content="EventFront is your all-in-one solution for planning, managing, and experiencing events with ease." />
+  <link rel="stylesheet" href="index.css" />
+  <script src="index.js" defer></script>
+  <script src="/general.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Yatra+One&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header class="main-header">
+    <div class="logo">EventFront</div>
+    <nav class="nav-links">
+      <a href="/Create Event/create_eventpage.html">Create Event</a>
+      <a href="/Events Dashboard/dashboard.html">Discover Events</a>
+      <a href="/Events Dashboard/myevents.html" id="myeventsLink">My Events</a>
+      <a href="/Login/login.html" id="loginLink">Log In</a>
+      <a href="/Sign UP/signup.html" id="signupLink">Sign Up</a>
+      <a href="/About/about.html">About Us</a>
+      <a href="/contact/contact.html">Contact</a>
+      <div class="profile-menu" id="profileMenu" style="display:none;">
+        <img src="/images/profile-icon.png" alt="Profile" id="profileIcon" class="profile-icon">
+        <div id="dropdownMenu" class="dropdown">
+          <a href="/Profile/profile.html">View Profile</a>
+          <a href="/Events Dashboard/myregistrations.html">My Registererd Events</a>
+          <a href="#" id="logoutBtn">Logout</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Plan, Manage, and Experience Events Seamlessly</h1>
+    <p>Our platform makes it easy to create events, register participants, and track attendance—all in one place.</p>
+    <div class="hero-buttons">
+      <a href="/Create Event/create_eventpage.html"><button>Create an Event</button></a>
+      <a href="/Sign Up/signup.html"><button>Sign Up Now</button></a>
+    </div>
+  </section>
+
+  <!-- Discover Events Section -->
+  <section class="discover-events">
+    <h2>Discover Events Near You</h2>
+    <p>Discover exciting events happening in your area and join the fun!</p>
+
+    <div class="event-cards" id="homepageEventsGrid">
+      <!-- 3 random events will load dynamically here -->
+    </div>
+
+    <div class="view-more">
+      <a href="/Events Dashboard/dashboard.html"><button>View More Events</button></a>
+    </div>
+  </section>
+
+  <!-- Event Dialog -->
+  <div id="eventDialog" class="dialog">
+    <div class="dialog-content">
+      <span id="closeDialog">&times;</span>
+      <img id="dialogEventImage" src="" alt="Event Image">
+      <div class="event-details">
+        <h2 id="dialogEventName"></h2>
+        <p id="dialogEventDescription"></p>
+        <p><strong>Date:</strong> <span id="dialogEventDate"></span></p>
+        <p><strong>Location:</strong> <span id="dialogEventLocation"></span></p>
+      </div>
+      <button id="registerBtn">Register</button>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="footer-spacer">
+    <div class="main-footer">
+      <div class="footer-about">
+        <h3>EventFront</h3>
+        <p>
+          EventFront is an innovative event management and engagement platform founded in 2026 by four visionary students with a shared passion for technology, community building, and seamless user experiences. Born out of a university project, EventFront quickly evolved into a fully-fledged solution designed to simplify the way individuals, organizations, and communities plan, host, and participate in events.
+        </p>
+      </div>
+      <div class="footer-social">
+        <h3>Discover</h3>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">X</a></li>
+          <li><a href="#">Threads</a></li>
+          <li><a href="#">Snapchat</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Copyright © EventFront 2026</p>
+      <p>Made with Love by Group 7</p>
+    </div>
+  </footer>
+</body>
+</html>

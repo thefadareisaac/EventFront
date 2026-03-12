@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Discover Events - EventFront</title>
+  <link rel="stylesheet" href="dashboard.css" />
+  <script src="/general.js" defer></script>
+  <script src="dashboard.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Yatra+One&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header class="main-header">
+    <div class="logo">EventFront</div>
+    <nav class="nav-links">
+      <a href="/Home Page/index.html">Home</a>
+      <a href="/Login/login.html" id="loginLink">Log In</a>
+      <a href="/Sign Up/signup.html" id="signupLink">Sign Up</a>
+      <a href="/Create Event/create_eventpage.html">Create Event</a>
+      <a href="/Events Dashboard/myevents.html" id="myeventsLink">My Events</a>
+      <a href="/About/about.html">About Us</a>
+      <a href="/contact/contact.html">Contact</a>
+      <div class="profile-menu" id="profileMenu" style="display:none;">
+        <img src="/images/profile-icon.png" alt="Profile" id="profileIcon" class="profile-icon">
+        <div id="dropdownMenu" class="dropdown">
+          <a href="/Profile/profile.html">View Profile</a>
+          <a href="/Events Dashboard/myregistrations.html">My Registererd Events</a>
+          <a href="#" id="logoutBtn">Logout</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Page Title -->
+  <section class="dashboard-header">
+    <div id="userGreeting"></div> <!-- ✅ Greeting will appear here -->
+    <h1>Discover Events</h1>
+    <p>Explore vibrant events created by others in your community</p>
+  </section>
+
+  <!-- Events Grid -->
+  <section class="dashboard-section">
+    <div class="event-grid" id="otherEventsGrid">
+      <!-- Events will be loaded dynamically here -->
+    </div>
+  </section>
+
+  <!-- Event Dialog -->
+  <div id="eventDialog" class="dialog">
+    <div class="dialog-content">
+      <span id="closeDialog">&times;</span>
+      <img id="dialogEventImage" src="" alt="Event Image">
+      <div class="event-details">
+        <h2 id="dialogEventName"></h2>
+        <p id="dialogEventDescription"></p>
+        <p><strong>Date:</strong> <span id="dialogEventDate"></span></p>
+        <p><strong>Location:</strong> <span id="dialogEventLocation"></span></p>
+      </div>
+      <button id="registerBtn">Register</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 EventFront. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

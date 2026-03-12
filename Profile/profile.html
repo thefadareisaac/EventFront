@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profile - EventFront</title>
+  <link rel="stylesheet" href="profile.css" />
+  <script defer src="profile.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Yatra+One&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header class="main-header">
+    <div class="logo">EventFront</div>
+    <nav class="nav-links">
+      <a href="/Home Page/index.html">Home</a>
+      <a href="/Create Event/create_eventpage.html">Create Event</a>
+      <a href="/About/about.html">About Us</a>
+      <a href="/contact/contact.html">Contact</a>
+
+        <!-- Profile Menu -->
+      <div class="profile-menu" id="profileMenu" style="display:none;">
+        <img src="/images/profile-icon.png" alt="Profile" id="profileIcon" class="profile-icon">
+        <div id="dropdownMenu" class="dropdown">
+          <a href="/Events Dashboard/myregistrations.html">My Registererd Events</a>
+          <a href="#" id="logoutBtn">Logout</a>
+        </div>
+      </div>
+    </nav>
+  
+  </header>
+
+  <!-- Profile Section -->
+  <section class="profile-container">
+    <h1>My Profile</h1>
+    <p>Manage your account details below.</p>
+
+    <form id="profile-form">
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" name="fullname"/>
+      
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username"/>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email"/>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password"/>
+
+      <input type="submit" value="Update Profile" class="btn-primary"/>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 EventFront. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

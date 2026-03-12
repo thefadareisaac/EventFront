@@ -1,0 +1,441 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  color: #333;
+}
+
+/* Header */
+.main-header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #ffffff;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  background-image: linear-gradient(79deg, #E43939, #581D60);
+  background-clip:text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-weight: 500;
+  background-image: linear-gradient(79deg, #E43939, #581D60);
+  background-clip:text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Profile Menu */
+.profile-menu {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.profile-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.profile-icon:hover {
+  opacity: 0.8;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  min-width: 200px;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.dropdown a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 14px;
+  color: #333;
+}
+
+/* .dropdown a:hover {
+  background: #581D60;
+  color:#ffffff; 
+} */
+
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background-image: url('/images/confetti-bg-3.png'); /*Replace with your confetti background */
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding-bottom: 100px;
+}
+
+.hero h1 {
+  font-size: 92px;
+  margin-bottom: 20px;
+  color: #000;
+  text-align: center;
+  font-weight: 300;
+  line-height: 105%;
+  padding-bottom: 20px;
+  width: 900px;
+  overflow-wrap: break-word;
+  margin: auto;
+  background-image: linear-gradient(
+        79deg, 
+        #E43939,
+        #581D60
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  font-size: 24px;
+  width: 1000px;
+  overflow-wrap: break-word;
+  margin:auto;
+  font-weight: 300;
+  margin-bottom: 30px;
+  color: #000;
+}
+
+.hero-buttons button {
+  margin: 10px;
+  font-size: 16px;
+  background-color: #ff4d4d;
+  color: #fff;
+  cursor: pointer;
+  background-image: linear-gradient(to right, #E43939, #581D60); 
+  
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+/* Discover Events Section */
+.discover-events {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.discover-events h2 {
+  font-size: 56px;
+  margin-bottom: 5px;
+  text-align: center;
+  font-weight: 600;
+  color: #000;
+  
+}
+
+.discover-events p {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #555;
+  font-size: 20px;
+}
+
+/* Event Grid (same as dashboard) */
+.event-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Event Card */
+/* Event Card (homepage + dashboard unified) */
+.event-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  text-align: left;   /* ✅ left align text like dashboard */
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+}
+
+.event-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.event-card h3 {
+  font-size: 20px;
+  margin: 15px 15px 10px;   /* ✅ add left margin for spacing */
+  font-weight: 600;
+  color: #333;
+}
+
+.event-card p {
+  font-size: 14px;
+  color: #666;
+  margin: 0 15px 15px;      /* ✅ left aligned with padding */
+  line-height: 1.4;
+  height:63px;
+  overflow: hidden;
+  text-align: left;  /* ✅ left align text like dashboard */
+}
+
+/* Buttons inside cards */
+.event-card button {
+  display: block;           /* ✅ ensures button aligns left */
+  margin: 0 15px 15px;      /* ✅ same left margin as text */
+  padding: 10px 20px;
+  background-image: linear-gradient(to right, #E43939, #581D60);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.event-card button:hover {
+  opacity: 0.9;
+}
+
+/* Dialog */
+.dialog {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  padding-top: 70px;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.dialog-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 500px;
+  max-height: 80vh;        /* limit height */
+  overflow-y: auto;        /* enable scrolling */
+  text-align: center;
+  position: relative;
+}
+
+#closeDialog {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background-image: linear-gradient(79deg, #E43939, #581D60);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+}
+
+#closeDialog:hover {
+  opacity: 0.8;
+}
+
+#dialogEventImage {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Event Details neatly arranged */
+.event-details {
+  text-align: left;          /* align text to the left */
+  margin: 10px auto;         /* spacing around details */
+  max-width: 450px;          /* keep content narrow for readability */
+}
+
+.event-details h2 {
+  font-size: 24px;
+  margin-bottom: 5px;
+  background-image: linear-gradient(79deg, #E43939, #581D60);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.event-details p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #555;
+  line-height: 1.4;
+}
+
+#registerBtn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+  color: #fff;
+  background-image: linear-gradient(to right, #E43939, #581D60);
+
+}
+
+#registerBtn:hover {
+  opacity: 0.9;
+}
+
+/* View More Button */
+.view-more {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.view-more button {
+  padding: 12px 30px;
+  background-image: linear-gradient(to right, #E43939, #581D60);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.view-more button:hover {
+  opacity: 0.9;
+}
+
+/* Footer */
+
+.footer-spacer{
+  /* display: flex;
+  justify-content: space-between; */
+  align-items: center;
+  background-image: url('/images/footer-bg.png');
+  background-size: cover;
+  background-position: top;
+  margin-top: 40px;
+  /* background-color: #581D60; */
+}
+.main-footer {
+  color: #fff;
+  padding: 150px 20px;
+  padding-bottom: 60px;
+  width:auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-about{
+  margin-left:40px;
+}
+.footer-social {
+  margin-bottom: 30px;
+  margin-left: 150px;
+  margin-right: auto;
+}
+
+.footer-about p{
+  font-size: 12px;
+  font-weight: 300;
+  width:100%;
+  max-width: 600px;
+}
+.footer-social ul {
+  list-style: none;
+}
+
+.footer-social li {
+  margin-bottom: 10px;
+}
+
+.footer-social a {
+  color: #ff4d4d;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 14px;
+  color: #aaa;
+  padding-bottom: 50px;
+}
+
+@media (max-width: 768px) {
+  section {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  section h2 {
+    font-size: 20px;
+  }
+
+  section p,
+  section ul li {
+    font-size: 15px;
+  }
+
+  .hero h1{
+    font-size: 36px;
+    font-weight: 500;
+    width: 100%;
+  }
+
+  .hero p{
+    font-size: 12px;
+    width: 100%;
+  };
+}

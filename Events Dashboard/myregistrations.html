@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Registrations - EventFront</title>
+  <link rel="stylesheet" href="myregistrations.css">
+  <script src="/general.js" defer></script>
+  <script src="myregistrations.js" defer></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="main-header">
+    <div class="logo">EventFront</div>
+    <nav class="nav-links">
+      <a href="/Home Page/index.html">Home</a>
+      <a href="/Events Dashboard/dashboard.html">Discover Events</a>
+      <a href="/Events Dashboard/myevents.html">My Events</a>
+      <a href="/Create Event/create_eventpage.html">Create Event</a>
+      <div class="profile-menu" id="profileMenu" style="display:none;">
+        <img src="/images/profile-icon.png" alt="Profile" id="profileIcon" class="profile-icon">
+        <div id="dropdownMenu" class="dropdown">
+          <a href="/Profile/profile.html">View Profile</a>
+          <a href="#" id="logoutBtn">Logout</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- My Registrations Section -->
+  <section class="dashboard-section">
+    <div id="userGreeting"></div> <!-- ✅ Greeting will appear here -->
+    <h2>My Registrations</h2>
+    <div class="event-grid" id="registrationsGrid">
+      <!-- Registered events will load dynamically here -->
+    </div>
+  </section>
+
+  <!-- Event Dialog -->
+  <div id="eventDialog" class="dialog">
+    <div class="dialog-content">
+      <span id="closeDialog">&times;</span>
+      <img id="dialogEventImage" src="" alt="Event Image">
+      <div class="event-details">
+        <h2 id="dialogEventName"></h2>
+        <p id="dialogEventDescription"></p>
+        <p><strong>Date:</strong> <span id="dialogEventDate"></span></p>
+        <p><strong>Location:</strong> <span id="dialogEventLocation"></span></p>
+      </div>
+      <button id="unregisterBtn">Register</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="footer-bottom">
+      <p>Copyright © EventFront 2026</p>
+      <p>Made with Love by Group 7</p>
+    </div>
+  </footer>
+</body>
+</html>
