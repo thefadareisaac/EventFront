@@ -100,7 +100,7 @@ body {
 .hero {
   text-align: center;
   padding: 80px 20px;
-  background-image: url('/images/confetti-bg-3.png'); /*Replace with your confetti background */
+  background-image: url('../images/confetti-bg-3.png'); /*Replace with your confetti background */
   background-size: cover;
   background-position: center;
   color: #fff;

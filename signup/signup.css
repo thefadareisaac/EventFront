@@ -10,7 +10,7 @@ body {
   font-family: 'Poppins', sans-serif;
   background-color: #ffffff;
   color: #333;
-  background-image: url('/images/confetti-bg-3.png');
+  background-image: url('../images/confetti-bg-3.png');
   background-position: left;
 }
 
