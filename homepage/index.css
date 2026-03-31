@@ -363,7 +363,7 @@ body {
   /* display: flex;
   justify-content: space-between; */
   align-items: center;
-  background-image: url('/images/footer-bg.png');
+  background-image: url('../images/footer-bg.png');
   background-size: cover;
   background-position: top;
   margin-top: 40px;
